@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    width:100%;
+    min-height: 100vh;
+    background-color: hsl(217, 54%, 11%);
+    font-family: 'Outfit', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size:18px;
+}
+.wrapper{
+    max-width:300px;
+    padding:15px 30px;
+    border-radius: 10px;
+    background-color: hsl(217, 54%, 11%,0.0001);
+   
+
+}
+.container{
+    width:100%;
+    padding:20px 15px;
+    background-color:hsl(216, 50%, 16%);
+    border-radius:10px;
+    border-radius:5px 10px 10px black;
+}
+.container .images{
+    width:100%;
+    position:relative;
+    cursor:pointer;
+    /* background-color: red; */
+    border-radius: 10px;
+}
+.images img{
+    width:100%;
+    border-radius: 10px;
+}
+.images .overlay{
+    position:absolute;
+    width:100%;
+    height:98%;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    text-align:center;
+    background-color:hsl(178, 100%, 50%,0.4);
+    border-radius:10px;
+    opacity:0;
+    transition:all .4s ease-in-out;
+}
+.overlay .eye{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:25px;
+}
+
+.container h3{
+    color:#fff;
+    font-size:0.9rem;
+    margin:15px 0px;
+}
+.container p{
+    /* background:red; */
+    width:100%;
+    font-size:.7rem;
+    color:hsl(215, 51%, 70%);
+    line-height: 15px;
+
+}
+.container .box{
+    width:100%;
+    display: flex;
+    /* background:red; */
+    justify-content: space-between;
+    align-items: center;
+    margin:15px 0px;
+}
+.box .each{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.each p{
+    margin:0;
+}
+.each img{
+    width:10px;
+    height:10px;
+    margin-right:4px;
+}
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top:1px solid hsl(215, 32%, 27%);
+    padding-top: 10px;
+}
+.footer img{
+    width:20px;
+    border:1px solid white;
+    border-radius: 50%;
+    margin-right:10px;
+
+}
+.changes{
+    color:white;
+    cursor: pointer;
+}
+.changes:hover{
+    color:hsl(178, 100%, 50%);
+}
+.images:hover .overlay{
+    opacity:1;
+}
+@media screen and (max-width:300px)
+{
+    body{
+        font-size:14px;
+    }
+    .container{
+        max-width:90%;
+    }
+}
